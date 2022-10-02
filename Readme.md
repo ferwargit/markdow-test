@@ -116,3 +116,6 @@ https://gist.github.com/rxaviers/7360908 -->
 @faztweb :smiley: 
 
 @faztweb :+1:
+
+<!-- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+ Todo lo que se puede hacer con markdown -->
