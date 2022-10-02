@@ -103,6 +103,6 @@ print("Hola Mundo")
 
 <!-- GITHUB MARKDOWN -->
 * [X] Tarea 1
-* [] Tarea 2
-* [] Tarea 3
+* [ ] Tarea 2
+* [ ] Tarea 3
 * [X] Tarea 4
