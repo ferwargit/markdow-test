@@ -106,3 +106,13 @@ print("Hola Mundo")
 * [ ] Tarea 2
 * [ ] Tarea 3
 * [X] Tarea 4
+
+<!-- Direccion de usuario -->
+@faztweb
+
+<!-- Buscar en github emojis
+https://gist.github.com/rxaviers/7360908 -->
+
+@faztweb :smiley: 
+
+@faztweb :+1:
