@@ -7,17 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class='blog'>Título del Blog</h1>
-    <p class="blog">Párrafo del Blog</p>
+    <h1 class='blog' data-blog>Título del Blog</h1>
+<h1 class='blog' data-blog>Título del Blog-Blog</h1>
+<h1 class='blog' data-blog-secundario>Título del Blog Secundario</h1>
+<p class="blog">Párrafo del Blog</p>
     <script>
-        const blog = document.querySelectorAll('.blog');
-        console.log(blog);
-        console.log(blog[0]);
-        console.log(blog[1]);
-        console.log(blog[0].innerHTML);
-        console.log(blog[0].innerText);
-        console.log(blog[1].outerText);
-        console.log(blog[1].textContent);
+        const blog = document.querySelectorAll('[data-blog]');
+    console.log(blog);
+    console.log(blog[0]);
+    console.log(blog[1]);
+    console.log(blog[0].innerHTML);
+    console.log(blog[0].innerText);
+    console.log(blog[1].outerText);
+    console.log(blog[1].textContent);
     </script>
 </body>
 </html>
