@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class='blog'>Título del Blog</h1>
+    <p class="blog">Párrafo del Blog</p>
+    <script>
+        const blog = document.querySelectorAll('.blog');
+        console.log(blog);
+        console.log(blog[0]);
+        console.log(blog[1]);
+        console.log(blog[0].innerHTML);
+        console.log(blog[0].innerText);
+        console.log(blog[1].outerText);
+        console.log(blog[1].textContent);
+    </script>
+</body>
+</html>
