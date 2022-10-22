@@ -1,0 +1,10 @@
+:root {
+    --rojo: red;
+}
+
+.parrafo {
+    background-color: var(--rojo);
+}
+.btn {
+    background-color: var(--rojo);
+}

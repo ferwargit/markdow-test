@@ -5,21 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class='blog' data-blog>Título del Blog</h1>
-<h1 class='blog' data-blog>Título del Blog-Blog</h1>
-<h1 class='blog' data-blog-secundario>Título del Blog Secundario</h1>
-<p class="blog">Párrafo del Blog</p>
-    <script>
-        const blog = document.querySelectorAll('[data-blog]');
-    console.log(blog);
-    console.log(blog[0]);
-    console.log(blog[1]);
-    console.log(blog[0].innerHTML);
-    console.log(blog[0].innerText);
-    console.log(blog[1].outerText);
-    console.log(blog[1].textContent);
-    </script>
+    <header>
+        <h1>My Website</h1>
+    </header>
+    <main>
+        <!-- <section>
+            <button id="btn" type="button">Acción</button>
+        </section> -->
+        <section>
+            <form action="">
+                <input id="search" type="text">
+            </form>
+        </section>
+    </main>
+       <script>
+
+        const search = document.getElementById('search');
+        const header = document.querySelector('header h1');
+        
+        search.addEventListener('keyup', (e,parametro) => {
+            header.innerText = e.target.value;
+            
+        });
+        
+
+        // search.addEventListener('change', (event) => {
+        //     console.log(event.target.value)
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const btn = document.getElementById('btn');
+
+        // btn.addEventListener('click', () => {
+        //     // console.log('Funciona el click');
+        //     // alert('Funciona el click');
+        //     const section = document.querySelector('section');
+        //     const subtitle = document.createElement('div');
+        //     subtitle.innerHTML = '<p>Esto es un subtítulo</p>'
+        //     subtitle.setAttribute('class', 'btn');
+        //     section.appendChild(subtitle);
+        // });
+
+
+
+
+
+
+
+
+
+
+
+        /* const header = document.querySelector('header');
+        const titulo = document.querySelector('h1');
+            console.log(header);
+            console.log(titulo);
+        const parrafo = document.createElement('p');
+        const link = document.createElement('a');
+            console.log(parrafo);
+            console.log(link);
+        parrafo.innerHTML = 'Esto es un <i>parrafo</i>';
+        link.innerText = 'Ir a google';
+            console.log(parrafo.innerText);
+            console.log(link.innerText);
+        parrafo.setAttribute('class', 'parrafo');
+        titulo.style.color = 'blue';
+        link.setAttribute('href', 'https://www.google.com');
+            console.log(parrafo);
+            console.log(link);
+        header.appendChild(parrafo);
+        header.appendChild(link);
+            console.log(header); */
+        
+        </script>
 </body>
 </html>
