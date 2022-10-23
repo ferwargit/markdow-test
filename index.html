@@ -9,27 +9,46 @@
 </head>
 <body>
     <header>
-        <h1>My Website</h1>
+        <h1>Lista de tareas</h1>
     </header>
     <main>
-        <!-- <section>
-            <button id="btn" type="button">Acción</button>
-        </section> -->
-        <section>
+        <section id="create" class="container">
+            <h2>Agregar Tarea</h2>
             <form action="">
-                <input id="search" type="text">
+                <label for="task">Tarea</label>
+                <input id="task" type="text" name="task">
+                <label for="deadline">Plazo</label>
+                <input id="deadline" type="text" name="deadline">
+                <label for="status">Estado</label>
+                <input id="status" type="text" name="status">
+                <button id="btn" type="button">Accion</button>
             </form>
         </section>
+        <section id="tasks" class="container">
+            <article class="task"></article>
+        </section>
     </main>
-       <script>
+    <footer>
+        <p>Made with love for Fer</p>
+    </footer>
+    <script src="./script.js">
 
-        const search = document.getElementById('search');
-        const header = document.querySelector('header h1');
+
+
+
+
+
+
+
+
+
+        // const search = document.getElementById('search');
+        // const header = document.querySelector('header h1');
         
-        search.addEventListener('keyup', (e,parametro) => {
-            header.innerText = e.target.value;
+        // search.addEventListener('keyup', (e,parametro) => {
+        //     header.innerText = e.target.value;
             
-        });
+        // });
         
 
         // search.addEventListener('change', (event) => {

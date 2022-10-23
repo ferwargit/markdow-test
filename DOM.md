@@ -349,3 +349,134 @@ Hay 3 formas de agregar un manejador de eventos:
 # Tipos de Eventos  
 
 ![](./DOM/tiposEventos.jpg)
+
+# Carga de datos al entrar a la página HTML  
+```html
+<main>
+    <section id="create" class="container">
+        <h2>Agregar Tarea</h2>
+        <form action="">
+            <label for="task">Tarea</label>
+            <input id="task" type="text" name="task">
+            <label for="deadline">Plazo</label>
+            <input id="deadline" type="text" name="deadline">
+            <label for="status">Estado</label>
+            <input id="status" type="text" name="status">
+            <button id="btn" type="button">Accion</button>
+        </form>
+    </section>
+    <section id="tasks" class="container">
+        <article class="task"></article>
+    </section>
+</main>
+```
+```javascript
+// Apenas entro a la pagina, carga estos elementos
+const tasks = [
+    {
+        id: 1,
+        name: 'Practicar HTML',
+        deadline: 'Jueves 12/10',
+        status: 'Pendiente'
+    },
+    {
+        id: 2,
+        name: 'Practicar CSS',
+        deadline: 'Jueves 14/10',
+        status: 'Pendiente'
+    },
+    {
+        id: 3,
+        name: 'Practicar Javascript',
+        deadline: 'Jueves 16/10',
+        status: 'Pendiente'
+    },
+]
+const tasksContainer = document.getElementById('tasks');
+
+tasks.map(task => {
+    const article = document.createElement('article');
+    article.setAttribute('class', 'task');
+    article.innerHTML = `
+        <h2>Tarea ${task.id}: ${task.name}</h2>
+        <p>Plazo: ${task.deadline}</p>
+        <p>Estado: ${task.status}</p>`;
+    tasksContainer.appendChild(article);
+});
+```
+# Agregar una tarea  
+```html
+<main>
+    <section id="create" class="container">
+        <h2>Agregar Tarea</h2>
+        <form action="">
+            <label for="task">Tarea</label>
+            <input id="task" type="text" name="task">
+            <label for="deadline">Plazo</label>
+            <input id="deadline" type="text" name="deadline">
+            <label for="status">Estado</label>
+            <input id="status" type="text" name="status">
+            <button id="btn" type="button">Accion</button>
+        </form>
+    </section>
+    <section id="tasks" class="container">
+        <article class="task"></article>
+    </section>
+</main>
+```
+```javascript
+const tasks = [
+    {
+        id: 1,
+        name: 'Practicar HTML',
+        deadline: 'Jueves 12/10',
+        status: 'Pendiente'
+    },
+    {
+        id: 2,
+        name: 'Practicar CSS',
+        deadline: 'Jueves 14/10',
+        status: 'Pendiente'
+    },
+    {
+        id: 3,
+        name: 'Practicar Javascript',
+        deadline: 'Jueves 16/10',
+        status: 'Pendiente'
+    },
+]
+const tasksContainer = document.getElementById('tasks');
+const taskName = document.getElementById('task');
+const taskDeadline = document.getElementById('deadline');
+const taskStatus = document.getElementById('status');
+const btn = document.getElementById('btn');
+
+function appendNewTask(task) {
+    const article = document.createElement('article');
+    article.setAttribute('class', 'task');
+    article.innerHTML = `
+        <h2>Tarea #${task.id}: ${task.name}</h2>
+        <p>Plazo: ${task.deadline}</p>
+        <p>Estado: ${task.status}</p>`;
+    tasksContainer.appendChild(article);
+}
+
+// Mapea el tasks por cada uno de los objetos del array y llama a la funcion appendNewTask() para crear el elemento en el HTML.
+tasks.map(task => {
+    appendNewTask(task);
+});
+
+btn.addEventListener('click', () => {
+    // El id lo toma del array tasks y los valores de los inputs ingresados por el usuario.
+    const newTask = {
+        id: tasks.length + 1,
+        name: taskName.value,
+        deadline: taskDeadline.value,
+        status: taskStatus.value
+    }
+    // Ingresa el objeto newTask al array tasks
+    tasks.push(newTask);
+    // LLama a la funcion pasandole eL nuevo objeto para su representacion en el HTML.
+    appendNewTask(newTask);
+})
+```
